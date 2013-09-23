@@ -10,7 +10,7 @@ urlpatterns = patterns(
     # url(r'^$', 'crepesbretonnes.views.home', name='home'),
     # url(r'^crepesbretonnes/', include('crepesbretonnes.foo.urls')),
 
-    url(r'^$', 'crepesbretonnes.view.home', name='home'),
+    url(r'^$', 'crepesbretonnes.views.home', name='home'),
     url(r'^blog/', include('blog.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
