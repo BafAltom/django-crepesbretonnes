@@ -4,6 +4,7 @@
 # from datetime import datetime
 
 # from django.http import HttpResponse
+from django.http import Http404
 from django.shortcuts import render
 
 from blog.models import Article
