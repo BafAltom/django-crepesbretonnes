@@ -15,5 +15,5 @@ def home(request):
 
 
 def view_article(request, ID):
-    article = get_object_or_404(Article, ID=ID)
+    article = get_object_or_404(Article, id=ID)
     return render(request, 'blog/read.html', {'article': article})
