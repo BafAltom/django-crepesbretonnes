@@ -16,5 +16,6 @@ def home(request):
 
 def view_article(request, id):
     """Affiche un article selon son identifiant (id)"""
-    article = Article.objects.filter(id=id)
+    article = Article.objects.get(id=id)
+    print "ARTICLE", article, article.title, "by", article.author, "etc..."
     return render(request, 'blog/read.html', {'article': article})
