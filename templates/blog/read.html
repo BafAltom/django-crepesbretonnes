@@ -7,6 +7,7 @@
     <div class="article">
         <h3>{{ article.title }} by {{ article.author }} on {{ article.date}} </h3>
         <p>{{ article.content}}</p>
+        <p><a href="{% url 'blog.views.home' %}">Return to article list</a></p>
     </div>
 {% endblock %}
 
