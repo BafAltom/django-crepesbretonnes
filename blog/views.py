@@ -8,7 +8,7 @@ from django.shortcuts import render
 
 def home(request):
     text = """<h1>Bienvenue sur mon blog !</h1>
-          <p>Ton papa a fait l'amour avec ta maman au moins une fois</p>
+          <p>C'est chouette.</p>
         """
     return HttpResponse(text)
 
