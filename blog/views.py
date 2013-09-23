@@ -16,6 +16,8 @@ def home(request):
 
 def view_article(request, id):
     """Affiche un article selon son identifiant (id)"""
-    article = Article.objects.get(id=id)
-    print "ARTICLE", article, article.title, "by", article.author, "etc..."
+    try:
+        article = Article.objects.get(id=id)
+    except Article.DoesNotExist:
+        raise Http404
     return render(request, 'blog/read.html', {'article': article})
