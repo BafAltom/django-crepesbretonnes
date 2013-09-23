@@ -9,14 +9,14 @@ class Article(models.Model):
     author = models.CharField(max_length=12)
     content = models.TextField(null=True)
     date = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Publication Date")
-    categorie = models.ForeignKey('Categorie')
+    category = models.ForeignKey('Category')
 
     def __unicode__(self):
         return u"%s" % self.title
 
 
-class Categorie(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=30)
 
     def __unicode__(self):
-        return self.nom
+        return self.name
