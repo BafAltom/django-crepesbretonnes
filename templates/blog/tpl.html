@@ -1,2 +1,11 @@
-<h1>Bienvenue sur mon Blog</h1>
-<p>Vous vouliez connaitre la date ? Et bien nous sommes le {{ current_date }}</p>
+
+{% extends "base.html" %}
+
+{% block title %}La date{% endblock %}
+
+{% block content %}
+    <h1>Bienvenue sur mon Blog</h1>
+    <p>Vous vouliez connaitre la date ? Et bien nous sommes le {{ current_date }}</p>
+{% endblock %}
+
+
