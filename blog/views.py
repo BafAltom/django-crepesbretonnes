@@ -14,7 +14,7 @@ def home(request):
     return render(request, 'blog/article_list.html', {'articles': articles})
 
 
-def view_article(request, ID, slug):
+def view_article(request, ID):
     """Affiche un article selon son identifiant (id)"""
-    article = get_object_or_404(Article, ID=ID, slug=slug)
+    article = get_object_or_404(Article, ID=ID)
     return render(request, 'blog/read.html', {'article': article})
