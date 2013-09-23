@@ -20,4 +20,4 @@ def view_article(request, id):
 
 
 def tpl(request):
-    return render(request, 'blog/tp1.html', {'current_date': datetime.now()})
+    return render(request, 'blog/tpl.html', {'current_date': datetime.now()})
