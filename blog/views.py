@@ -4,8 +4,7 @@
 # from datetime import datetime
 
 # from django.http import HttpResponse
-from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from blog.models import Article
 
@@ -17,8 +16,5 @@ def home(request):
 
 def view_article(request, id):
     """Affiche un article selon son identifiant (id)"""
-    try:
-        article = Article.objects.get(id=id)
-    except Article.DoesNotExist:
-        raise Http404
+    article = get_object_or_404(Article, id=id)
     return render(request, 'blog/read.html', {'article': article})
