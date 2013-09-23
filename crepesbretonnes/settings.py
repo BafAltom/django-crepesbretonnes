@@ -125,6 +125,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware'
+    'django.contrib.auth.middleware.AuthenticationMiddleware'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'blog'
