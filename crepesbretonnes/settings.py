@@ -109,7 +109,7 @@ ROOT_URLCONF = 'crepesbretonnes.urls'
 WSGI_APPLICATION = 'crepesbretonnes.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/home/master/Projects/crepesbretonnes/templates'
+    '/home/master/Projects/django-crepesbretonnes/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
