@@ -5,7 +5,7 @@
 
 {% block content %}
     <h1>Blog: Contact form</h1>
-    {% if envoi %}<p>Votre message a bien été envoyé !</p>{% endif %}
+    {% if messageSent %}<p>Votre message a bien été envoyé !</p>{% endif %}
     <p>Send me something plz</p>
     <form action="{% url "blog.views.contact" %}" method="post">{% csrf_token %}
     {{ form.as_p }}
