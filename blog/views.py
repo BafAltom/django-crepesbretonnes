@@ -21,6 +21,7 @@ def view_article(request, ID):
 
 
 def contact(request):
+    messageSent = False
     if request.method == 'POST':
         form = ContactForm(request.POST)
 
