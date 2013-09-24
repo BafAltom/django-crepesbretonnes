@@ -26,7 +26,7 @@ def contact(request):
         form = ContactForm(request.POST)
 
         if form.is_valid():
-            subject = form.cleaned_data['sujet']
+            subject = form.cleaned_data['subject']
             message = form.clenaed_data['message']
             sender = form.cleaned_data['sender']
             sendCopy = form.cleaned_data['sendCopy']
