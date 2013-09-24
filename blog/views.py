@@ -33,6 +33,6 @@ def contact(request):
             # Envoi du mail...
             messageSent = True
 
-        else:
-            form = ContactForm()
-        return render(request, 'blog/contact.html', {'form': form, 'messageSent': messageSent})
+    else:
+        form = ContactForm()
+    return render(request, 'blog/contact.html', {'form': form, 'messageSent': messageSent})
