@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 from django.contrib import admin
-from blog.models import Category, Article
+from blog.models import Category, Article, Contact
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -37,3 +37,4 @@ class ArticleAdmin(admin.ModelAdmin):
 
 admin.site.register(Category)
 admin.site.register(Article, ArticleAdmin)
+admin.site.register(Contact)
