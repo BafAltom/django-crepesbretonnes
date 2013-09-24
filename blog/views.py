@@ -33,6 +33,7 @@ def contact(request):
 
             # Envoi du mail...
             messageSent = True
+            form = ContactForm()
 
     else:
         form = ContactForm()
