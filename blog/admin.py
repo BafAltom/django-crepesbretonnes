@@ -8,6 +8,19 @@ class ArticleAdmin(admin.ModelAdmin):
     date_hierarchy = 'date'
     ordering = ('date', )
     search_fields = ('title', 'content')
+    # fields = ('title', 'author', 'content', 'category')
+    fieldsets = (
+        # Fieldset 1 : meta-info (titre, auteur…)
+        ('Metadata', {
+            'classes': ['collapse', ],
+            'fields': ('title', 'author', 'category')
+        }),
+        # Fieldset 2 : contenu de l'article
+        ('Article content', {
+            'description': u'HTML can be used (don\'t break anything)',
+            'fields': ('content', )
+        }),
+    )
 
     def content_peek(self, article):
         """
