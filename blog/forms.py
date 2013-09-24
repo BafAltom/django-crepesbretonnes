@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 from django import forms
 
+
 class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100)
     message = forms.CharField(widget=forms.Textarea)
@@ -13,7 +14,7 @@ class ContactForm(forms.Form):
         message = cleaned_data.get('message')
         if subject and message:
             if "pizza" in subject and "pizza" in message:
-                msg = u"Pizzas? In MY contact form?"
+                msg = u"Pizzas? In MY contact form? That is forbidden"
                 self._errors["message"] = self.error_class([msg])
                 del cleaned_data["message"]
         return cleaned_data

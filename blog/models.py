@@ -21,3 +21,12 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=255)
+    adress = models.TextField()
+    pic = models.ImageField(upload_to="pics/")
+
+    def __unicode__(self):
+        return self.name
